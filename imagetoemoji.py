@@ -45,6 +45,7 @@ heading=Label(root,text="Emojify",pady=5, font=('arial',45,'bold'),bg='black',fg
 heading.pack()
 lmain = tk.Label(master=root,padx=50,bd=10)
 lmain2 = tk.Label(master=root,pady=10,bd=10)
+lmain3=tk.Label(master=root,bd=10,fg="#CDCDCD",bg='black')
 root['bg']='grey'
 root.geometry("1400x900+100+10")
 
@@ -81,8 +82,15 @@ while True:
     lmain.configure(image=imgtk)
     lmain2.configure(image=imgtk2)
 
+    lmain3.configure(text=emotion_dict[show_text[0]],font=('arial',25,'bold'))
+
+
+
+
     lmain.pack(side=LEFT)
     lmain.place(x=50,y=150)
+    lmain3.pack()
+    lmain3.place(x=1024,y=70)
 
     lmain2.pack(side=RIGHT)
     lmain2.place(x=900,y=150)
